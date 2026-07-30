@@ -1,0 +1,9 @@
+# Ignore VS Code local settings
+.vscode/
+
+# Ignore Mac and Windows system clutter
+.DS_Store
+Thumbs.db
+
+# Ignore large package folders (if using Node.js)
+node_modules/
