@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #0B1F3A;
+  background: #F3F4F6;
   width: 100vw;
 }
 
@@ -15,7 +15,7 @@ body {
   background: #D4AF37;
   width: 100vw;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
 }
 
 nav{
@@ -28,19 +28,24 @@ nav .head {
   display: inline-block;
   display: flex;
   flex-direction: row;
+}
 
-
-img:nth-of-type(1) {
+.head>img {
   mix-blend-mode: multiply;
+  display: inline-block;
   height: 3rem;
   width: auto;
   border: solid 1px;
   border-radius: 50%;
   position: relative;
   left: -0.2rem;
-  top: -0.7rem;
+  top: -0.6rem;
 }
 
+.bar {
+  position: relative;
+  top: -0.3rem;
+}
 
 h2{
   color: #F3F4F6;
@@ -59,21 +64,133 @@ h5 {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  line-height: 0.4rem;
+  line-height: 0.5rem;
   text-align: center;
   position: relative;
   top: 0.3rem;
   left: 0;
+}
 
 span {
   color: #0B1F3A;
 }
 
-/*.header:nth-child(1) {
+h1 {
   color: #FFFFFF;
   font-family: "Playfair Display", serif;
-}*/
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 700;
+}
+
+h1>span {
+  color: #10B981;
+}
+h3 {
+  font-family: "Inter", serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.container1 {
+  margin: 1rem 0 0.5rem 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 2.5rem;
+  background: #10B981;
+  position: relative;
+}
+
+.create {
+  position: absolute;
+  top: 0.6rem;
+  left: 8.5rem
+}
+
+.container2 {
+  border-radius: 10px;
+  border: solid  #E5E7EB 0.1rem;
+  width: 100%;
+  height: 2.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.explore {
+  position: absolute;
+  top: 0.6rem;
+  left: 8.6rem;
+}
+
 .images {
+  display: inline-block;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  object-fit: cover;
+}
+
+.images>img {
+  width: 6rem;
+  height: 4.5rem;
+  border: solid  #E5E7EB 1px;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.heading {
+  text-align: center;
+  color: #10B981;
+  margin: 1rem;
+  font-family: "Playfair display", serif;
+  font-weight: 600;
+}
+
+.card1 {
+  background: #FFFFFF;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card1 img, .card2 img {
+  display: inline-block;
+  width: 2rem;
+  height: auto;
+}
+
+.card1 p, .card2 p {
+  font-family: "Inter", serif;
+  font-size: 12px;
+  font-weight: 500;
+  color:  #111827;
+}
+
+.card2 {
+  margin: 1rem;
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.card2>div {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card2 img {
+  margin: 0 2.6rem;
 }
