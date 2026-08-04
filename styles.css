@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0B1F3A;
+  width: 100vw;
+}
+
+nav>img {
+  mix-blend-mode: multiply;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+img:nth-of-type(2) {
+  position: relative;
+  
+}
+.name {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  background: #D4AF37;
+  padding: 20px;
+}
+
