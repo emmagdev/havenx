@@ -18,13 +18,13 @@ body {
   padding: 20px 20px 5px 20px;
 }
 
-nav{
+nav, .bottom{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-nav .head {
+nav>.head, .bottom>.head {
   display: inline-block;
   display: flex;
   flex-direction: row;
@@ -85,6 +85,7 @@ h1 {
 h1>span {
   color: #D4AF37;
 }
+
 h3 {
   font-family: "Inter", serif;
   font-size: 1rem;
@@ -98,13 +99,12 @@ h3 {
   width: 100%;
   height: 2.5rem;
   background: #D4AF37;
-  position: relative;
+  text-align: center;
 }
 
 .create {
-  position: absolute;
+  position: relative;
   top: 0.6rem;
-  left: 8.5rem
 }
 
 .container2 {
@@ -123,14 +123,13 @@ h3 {
 }
 
 .images {
-  display: inline-block;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  object-fit: cover;
 }
 
-.images>img {
+.images>img, .card4>img {
+  display: inline-block;
   width: 6rem;
   height: 4.5rem;
   border: solid  #E5E7EB 1px;
@@ -150,7 +149,7 @@ section {
   font-weight: 600;
 }
 
-.card1 {
+.card1, .card4 {
   background: #FFFFFF;
   padding: 10px;
   display: flex;
@@ -165,16 +164,15 @@ section {
   display: inline-block;
   width: 2rem;
   height: auto;
+  margin: 0.5rem 0;
 }
 
-.card1 p, .card2 p, .card3 p {
+p {
   font-family: "Inter", serif;
   font-size: 12px;
   font-weight: 500;
   color:  #111827;
 }
-
-
 
 .card2>div, .card3>div {
   background: #FFFFFF;
@@ -195,11 +193,7 @@ section {
   text-align: center;
 }
 
-.card2 img {
-  margin: 0 2.6rem;
-}
-
-.card3 {
+.card3, .card4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -209,4 +203,69 @@ section {
 .card3>div {
   width: 5.5rem;
 }
+
+.card4 {
+  text-align: left;
+}
+
+.card4>img {
+  border-radius: 100%;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1rem;
+  position: relative ;
+  top: 1.2rem;
+}
+
+.write-up>p {
+  margin: 1rem 0;
+}
+
+.write-up p {
+  color: #6B7280;
+  font-size: 15px;
+}
+
+.write-up .names {
+  color: #111827;
+  font-weight: 600;
+}
+
+.soon {
+  background: #10B981;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.start {
+  background: #0B1F3A;
+  padding: 10px 70px 25px 70px;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social>div {
+  border: 0.1rem solid #D4AF37;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 4px;
+  margin: 1rem;
+}
+
+.social img {
+  width: 1.5rem;
+    position: relative;
+    top: 0.1rem;
+    left: 0.1rem;
+}
+
 
