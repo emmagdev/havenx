@@ -12,7 +12,7 @@ body {
 }
 
 .hero {
-  background: #D4AF37;
+  background: #0B1F3A;
   width: 100vw;
   position: relative;
   padding: 20px 20px 5px 20px;
@@ -31,7 +31,6 @@ nav .head {
 }
 
 .head>img {
-  mix-blend-mode: multiply;
   display: inline-block;
   height: 3rem;
   width: auto;
@@ -72,7 +71,7 @@ h5 {
 }
 
 span {
-  color: #0B1F3A;
+  color: #D4AF37;
 }
 
 h1 {
@@ -80,10 +79,11 @@ h1 {
   font-family: "Playfair Display", serif;
   margin: 1rem 0 0.5rem 0;
   font-weight: 700;
+  font-size: 1.7rem;
 }
 
 h1>span {
-  color: #10B981;
+  color: #D4AF37;
 }
 h3 {
   font-family: "Inter", serif;
@@ -97,7 +97,7 @@ h3 {
   border-radius: 10px;
   width: 100%;
   height: 2.5rem;
-  background: #10B981;
+  background: #D4AF37;
   position: relative;
 }
 
@@ -109,7 +109,7 @@ h3 {
 
 .container2 {
   border-radius: 10px;
-  border: solid  #E5E7EB 0.1rem;
+  border: solid  #D4AF37 0.1rem;
   width: 100%;
   height: 2.5rem;
   position: relative;
@@ -138,9 +138,13 @@ h3 {
   object-fit: cover;
 }
 
+section {
+  padding: 1rem;
+}
+
 .heading {
   text-align: center;
-  color: #10B981;
+  color: #D4AF37;
   margin: 1rem;
   font-family: "Playfair display", serif;
   font-weight: 600;
@@ -152,45 +156,57 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 0 1rem;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.card1 img, .card2 img {
+.card1 img, .card2 img, .card3 img {
   display: inline-block;
   width: 2rem;
   height: auto;
 }
 
-.card1 p, .card2 p {
+.card1 p, .card2 p, .card3 p {
   font-family: "Inter", serif;
   font-size: 12px;
   font-weight: 500;
   color:  #111827;
 }
 
-.card2 {
-  margin: 1rem;
-  max-width: 90vw;
-  display: grid;
-  grid-template-columns: repeat(3, 30vw);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 0.5rem;
-  text-align: center;
-}
 
-.card2>div {
+
+.card2>div, .card3>div {
   background: #FFFFFF;
   border-radius: 10px;
   padding: 10px 7px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .card2 img {
   margin: 0 2.6rem;
 }
+
+.card3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center; 
+}
+
+.card3>div {
+  width: 5.5rem;
+}
+
