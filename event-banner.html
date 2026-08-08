@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HavenX — Event Banner</title>
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+</head>
+
+<body>
+  <div class="hero flow-hero">
+    <nav>
+      <div class="head">
+        <img src="./assets/logo.png" alt="Logo design" />
+        <div class="name">
+          <h2>HAVEN<span>X</span></h2>
+          <h5>Creating Events that Inspire</h5>
+        </div>
+      </div>
+      <div class="bar">
+        <img src="./assets/fluent--navigation-24-filled_gold.svg" alt="Nav. bar" width="30px" />
+      </div>
+    </nav>
+  </div>
+
+  <main class="flow-main">
+    <h1 class="flow-title">Add an event banner</h1>
+    <p class="flow-subtitle">Make your event stand out with a great cover image.</p>
+
+    <div class="progress-steps" aria-hidden="true">
+      <div class="step completed">
+        <span class="step-circle">1</span>
+        <span class="step-label">Details</span>
+      </div>
+      <div class="step-line completed"></div>
+      <div class="step completed">
+        <span class="step-circle">2</span>
+        <span class="step-label">Date &amp; Venue</span>
+      </div>
+      <div class="step-line completed"></div>
+      <div class="step active">
+        <span class="step-circle">3</span>
+        <span class="step-label">Banner</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <span class="step-circle">4</span>
+        <span class="step-label">Tickets</span>
+      </div>
+    </div>
+    <p class="step-caption">Step 3 of 4</p>
+
+    <div class="upload-box" id="uploadBox" role="button" tabindex="0" aria-label="Upload event banner image">
+      <div class="upload-icon" aria-hidden="true">🖼️</div>
+      <p class="upload-title">Upload Event Banner</p>
+      <p class="upload-hint">PNG, JPG or JPEG</p>
+      <p class="upload-hint">Recommended dimensions: 1200 × 630 px</p>
+    </div>
+    <label for="bannerInput" class="field-hint">
+      <input type="file" id="bannerInput" accept="image/png, image/jpeg" class="hidden-field" />
+    </label>
+
+    <div class="upload-preview" id="uploadPreview">
+      <img id="uploadPreviewImg" src="" alt="Preview of your uploaded event banner" />
+      <button type="button" class="remove-btn" id="removeBannerBtn" aria-label="Remove banner image">✕</button>
+    </div>
+
+    <div class="btn-row">
+      <a href="event-location.html" class="btn btn-outline">Back</a>
+      <button type="button" class="btn btn-primary" id="bannerContinueBtn">Continue</button>
+    </div>
+  </main>
+
+  <script src="./create-event.js"></script>
+</body>
+
+</html>
