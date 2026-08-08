@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HavenX — Date &amp; Venue</title>
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+</head>
+
+<body>
+  <div class="hero flow-hero">
+    <nav>
+      <div class="head">
+        <img src="./assets/logo.png" alt="Logo design" />
+        <div class="name">
+          <h2>HAVEN<span>X</span></h2>
+          <h5>Creating Events that Inspire</h5>
+        </div>
+      </div>
+      <div class="bar">
+        <img src="./assets/fluent--navigation-24-filled_gold.svg" alt="Nav. bar" width="30px" />
+      </div>
+    </nav>
+  </div>
+
+  <main class="flow-main">
+    <h1 class="flow-title">Where and when is your event?</h1>
+    <p class="flow-subtitle">Let attendees know exactly when and where to show up.</p>
+
+    <div class="progress-steps" aria-hidden="true">
+      <div class="step completed">
+        <span class="step-circle">1</span>
+        <span class="step-label">Details</span>
+      </div>
+      <div class="step-line completed"></div>
+      <div class="step active">
+        <span class="step-circle">2</span>
+        <span class="step-label">Date &amp; Venue</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <span class="step-circle">3</span>
+        <span class="step-label">Banner</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <span class="step-circle">4</span>
+        <span class="step-label">Tickets</span>
+      </div>
+    </div>
+    <p class="step-caption">Step 2 of 4</p>
+
+    <form id="locationForm" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="eventDate">Event Date</label>
+          <input type="date" id="eventDate" name="eventDate" />
+          <span class="field-error"></span>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="startTime">Start Time</label>
+          <input type="time" id="startTime" name="startTime" />
+          <span class="field-error"></span>
+        </div>
+        <div class="field">
+          <label for="endTime">End Time</label>
+          <input type="time" id="endTime" name="endTime" />
+          <span class="field-error"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Event Type</label>
+        <div class="toggle-group">
+          <div class="toggle-option" data-type="physical">Physical Event</div>
+          <div class="toggle-option" data-type="online">Online Event</div>
+        </div>
+      </div>
+
+      <div id="physicalFields">
+        <div class="field">
+          <label for="venueName">Venue Name</label>
+          <input type="text" id="venueName" name="venueName" placeholder="Lagos Tech Hub" />
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="venueAddress">Address</label>
+          <input type="text" id="venueAddress" name="venueAddress" placeholder="12 Innovation Drive, Yaba, Lagos" />
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="venueCity">City</label>
+          <input type="text" id="venueCity" name="venueCity" placeholder="Lagos" />
+          <span class="field-error"></span>
+        </div>
+      </div>
+
+      <div class="field hidden-field">
+        <label for="eventLink">Meeting/Event Link</label>
+        <input type="text" id="eventLink" name="eventLink" placeholder="https://meet.example.com/your-event" />
+        <span class="field-error"></span>
+      </div>
+
+      <div class="btn-row">
+        <a href="event-details.html" class="btn btn-outline">Back</a>
+        <button type="submit" class="btn btn-primary">Continue</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="./create-event.js"></script>
+</body>
+
+</html>
