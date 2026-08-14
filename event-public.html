@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HavenX — Event</title>
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+</head>
+
+<body>
+  <div class="hero flow-hero">
+    <nav>
+      <div class="head">
+        <img src="./assets/logo.png" alt="Logo design" />
+        <div class="name">
+          <h2>HAVEN<span>X</span></h2>
+          <h5>Creating Events that Inspire</h5>
+        </div>
+      </div>
+      <div class="bar">
+        <img src="./assets/fluent--navigation-24-filled_gold.svg" alt="Nav. bar" width="30px" />
+      </div>
+    </nav>
+  </div>
+
+  <main class="flow-main">
+    <p class="field-hint hidden-field" id="sharedNotice">Shared preview — banner image not included in shared links.</p>
+
+    <div class="review-card" id="publicEventCard">
+      <img id="publicBanner" class="review-banner" src="" alt="Event banner" />
+
+      <p class="review-meta" id="publicCategory">Category</p>
+      <h2 id="publicName">Event name</h2>
+      <p class="review-description" id="publicDescription">Description</p>
+
+      <div class="review-row">
+        <span class="label">Date</span>
+        <span class="value" id="publicDate">Not set</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Time</span>
+        <span class="value" id="publicTimeRange">Not set</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Event Type</span>
+        <span class="value" id="publicType">Physical Event</span>
+      </div>
+      <div class="review-row" id="publicVenueRow">
+        <span class="label">Venue</span>
+        <span class="value" id="publicVenue">Not set</span>
+      </div>
+      <div class="review-row" id="publicAddressRow">
+        <span class="label">Address</span>
+        <span class="value" id="publicAddress">Not set</span>
+      </div>
+      <div class="review-row hidden-field" id="publicLinkRow">
+        <span class="label">Event Link</span>
+        <span class="value" id="publicLink">Not set</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Ticket</span>
+        <span class="value" id="publicTicketType">Free ticket</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Price</span>
+        <span class="value" id="publicTicketPrice">Free</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Available Tickets</span>
+        <span class="value" id="publicTicketQuantity">0</span>
+      </div>
+    </div>
+
+    <div id="noEventState" class="hidden-field">
+      <p class="flow-subtitle">No published event found yet.</p>
+    </div>
+
+    <div class="btn-row">
+      <a href="index.html" class="btn btn-outline">Back to Home</a>
+    </div>
+  </main>
+
+  <script src="./create-event.js"></script>
+</body>
+
+</html>

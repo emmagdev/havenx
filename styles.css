@@ -113,7 +113,6 @@ h3 {
   height: 2.5rem;
   position: relative;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .explore {
@@ -157,10 +156,6 @@ section {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.hide {
-  display: none;
 }
 
 .card1 img, .card2 img, .card3 img {
@@ -271,175 +266,532 @@ p {
     left: 0.1rem;
 }
 
+/* =========================================================
+   EVENT CREATION FLOW — ADDED STYLES
+   Reuses existing colors, fonts, radius (10px) and shadow
+   from the design system above. New component classes are
+   used instead of .container1/.container2/.explore because
+   those rely on fixed widths/absolute offsets tied to the
+   homepage's specific button text and are not reusable
+   across the multi-step flow.
+   ========================================================= */
 
-@media screen and (min-width: 768px) {
+.flow-hero {
+  padding: 16px 20px;
+}
 
-  .hero {
-    padding: 2rem 2rem 1rem 2rem;
+/* Wraps the existing .container1 CTA buttons on index.html in a real <a>
+   so "Create an Event" / "Get Started for Free" navigate to the flow. */
+.container1-link {
+  display: block;
+  text-decoration: none;
+}
+
+.flow-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 3rem;
+}
+
+.flow-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0B1F3A;
+  margin-bottom: 0.4rem;
+}
+
+.flow-subtitle {
+  font-family: "Inter", serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6B7280;
+  margin-bottom: 1.75rem;
+}
+
+/* Progress indicator */
+.progress-steps {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 0 0 auto;
+}
+
+.step-circle {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  border: 2px solid #E5E7EB;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9CA3AF;
+}
+
+.step.active .step-circle,
+.step.completed .step-circle {
+  border-color: #D4AF37;
+  background: #D4AF37;
+  color: #0B1F3A;
+}
+
+.step-label {
+  font-family: "Inter", serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #9CA3AF;
+  white-space: nowrap;
+}
+
+.step.active .step-label,
+.step.completed .step-label {
+  color: #0B1F3A;
+}
+
+.step-line {
+  flex: 1 1 auto;
+  height: 2px;
+  background: #E5E7EB;
+  margin: 0.9rem 0.25rem 0;
+}
+
+.step-line.completed {
+  background: #D4AF37;
+}
+
+.step-caption {
+  font-family: "Inter", serif;
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 420px) {
+  .step-label { display: none; }
+}
+
+/* Form fields */
+.field {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-family: "Inter", serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: "Inter", serif;
+  font-size: 0.9rem;
+  color: #111827;
+  background: #FFFFFF;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.field-hint {
+  font-family: "Inter", serif;
+  font-size: 0.72rem;
+  color: #9CA3AF;
+}
+
+.field-error {
+  display: none;
+  font-family: "Inter", serif;
+  font-size: 0.78rem;
+  color: #DC2626;
+}
+
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea {
+  border-color: #DC2626;
+}
+
+.field.has-error .field-error {
+  display: block;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-row .field {
+  flex: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  font-family: "Inter", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background: #D4AF37;
+  color: #0B1F3A;
+}
+
+.btn-primary:hover {
+  background: #c39d2e;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #D4AF37;
+  color: #0B1F3A;
+}
+
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-row {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* Physical / Online toggle */
+.toggle-group {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 0.7rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: "Inter", serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6B7280;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.toggle-option.selected {
+  border-color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
+  color: #0B1F3A;
+}
+
+.hidden-field {
+  display: none;
+}
+
+/* Banner upload */
+.upload-box {
+  border: 2px dashed #E5E7EB;
+  border-radius: 12px;
+  padding: 2.25rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.upload-box:hover {
+  border-color: #D4AF37;
+}
+
+.upload-box .upload-title {
+  font-family: "Inter", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0.75rem 0 0.3rem;
+}
+
+.upload-box .upload-hint {
+  font-family: "Inter", serif;
+  font-size: 0.72rem;
+  color: #9CA3AF;
+}
+
+.upload-icon {
+  font-size: 1.6rem;
+}
+
+.upload-preview {
+  position: relative;
+  margin-top: 1rem;
+  display: none;
+}
+
+.upload-preview.visible {
+  display: block;
+}
+
+.upload-preview img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  border: 1px solid #E5E7EB;
+}
+
+.upload-preview .remove-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  border: none;
+  background: #0B1F3A;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Ticket setup */
+.ticket-type-options {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-type-card {
+  flex: 1;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.ticket-type-card.selected {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.18);
+}
+
+.ticket-type-card p {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #111827;
+}
+
+.paid-fields {
+  display: none;
+}
+
+.paid-fields.visible {
+  display: block;
+}
+
+/* Review page */
+.review-banner {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  background: #E5E7EB;
+  display: block;
+}
+
+.review-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.review-card h2 {
+  font-family: "Playfair Display", serif;
+  color: #0B1F3A;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.review-meta {
+  font-family: "Inter", serif;
+  color: #D4AF37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+.review-description {
+  font-family: "Inter", serif;
+  color: #374151;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+}
+
+.review-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #F3F4F6;
+  font-family: "Inter", serif;
+  font-size: 0.82rem;
+}
+
+.review-row:last-child {
+  border-bottom: none;
+}
+
+.review-row .label {
+  color: #6B7280;
+}
+
+.review-row .value {
+  color: #111827;
+  font-weight: 600;
+  text-align: right;
+}
+
+.review-edit-link {
+  display: block;
+  text-align: center;
+  font-family: "Inter", serif;
+  font-size: 0.78rem;
+  color: #6B7280;
+  text-decoration: underline;
+  margin-top: 0.75rem;
+}
+
+/* Success state */
+.success-page {
+  text-align: center;
+  padding: 3.5rem 1.25rem 2rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: #10B981;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.success-page h1 {
+  color: #0B1F3A;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.success-page p {
+  color: #6B7280;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.success-page .btn {
+  margin-bottom: 0.75rem;
+}
+
+.success-page #copyLinkFeedback {
+  margin-top: 0.5rem;
+  color: #10B981;
+  font-weight: 600;
+}
+
+/* -------- Tablet -------- */
+@media (min-width: 768px) {
+  .flow-main {
+    max-width: 620px;
+    padding: 2.5rem 2rem 4rem;
   }
-  
-  .head>img, .bar img {
-   width: 5rem;
-   height: auto;
-  }
-  
-  .name {
-    top: 1.1rem;
+
+  .flow-title {
+    font-size: 1.9rem;
   }
 
-  .name h2 {
-    font-size: 2rem;
+  .field-row {
+    flex-direction: row;
+    gap: 1rem;
   }
 
-  .name h5 {
-    font-size: 0.8rem;
-    position: relative;
-    top: 0.5rem;
+  .btn-row {
+    flex-direction: row;
   }
 
-
-  h1 {
-    font-size: 3rem;
-    line-height: 1.15;
-    margin: 1rem 0 1rem;
+  .btn-row .btn {
+    width: auto;
+    flex: 1;
   }
 
-  .hero > h3 {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    max-width: 45rem;
+  .review-banner {
+    height: 260px;
+  }
+}
+
+/* -------- Desktop -------- */
+@media (min-width: 1024px) {
+  .flow-main {
+    max-width: 760px;
   }
 
-
-  .container1, .container2 {
-    display: inline-block;
-    width: 20rem;
-    height: 4rem;
-    margin-top: 1.5rem;
-  }
-
-  .container1 {
-    margin-right: 0.5rem;
-  }
-
-  .container2 {
-    margin-bottom: 1rem;
-  }
-
-  .create, .explore {
-    text-align: center;
-    padding-top: 0.4rem;
-    font-size: 1.5rem;
-  }
-
-
-  .images {
-    margin-top: 0.5rem;
-  }
-
-  .images > img {
-    width: 24%;
-    height: 15rem;
-  }
-
-
-  section {
-    padding: 1.5rem 2rem;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .card1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 1rem 2rem;
-    text-align: left;
-  }
-  
-  .hide {
-    display: inline-block;
-  }
-  
-  .hide2  {
-    display: none;
-  }
-
-  .card1 > div {
-    padding: 0.8rem;
-    max-width: 20rem;
-  }
-
-  .card1 img, .card2 img, .card3 img {
-    width: 5rem;
-    height: auto;
-  }
-
-  .card1 p, .card2 p, .card3 p, .card4 p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    font-weight: 700;
-  }
-
-  .card2 > div {
-    min-height: 10rem;
-  }
-
-
-  .card3 > div {
-    width: 25rem;
-    min-height: 10rem;
-    padding: 1rem;
-  }
-
-  .card4 {
-    width: 100%;
-    padding: 1rem 3rem;
-    justify-content: center;
-  }
-
-  .card4 > img {
-    width: 6rem;
-    height: 6rem;
-    margin: 1.5rem;
-    top: 0;
-  }
-
-  .write-up p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
-  
-  .card3 .soon {
-    margin-top: 2rem;
-  }
-
-  .start {
-    width: 100%;
-    margin: 
-    padding: 2rem 3rem;
-  }
-
-  .start h1 {
-    font-size: 2.4rem;
-  }
-
-  .start .container1 {
-    display: block;
-    width: 20rem;
-    margin: 1rem auto 0;
-  }
-
-  footer .hero {
-    padding: 1.5rem 2rem;
-  }
-
-  .social {
-    justify-content: center;
-  }
-
-  .social > div {
-    margin: 0.7rem;
+  .review-banner {
+    height: 320px;
   }
 }
