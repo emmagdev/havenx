@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HavenX — Event Details</title>
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+</head>
+
+<body>
+  <div class="hero flow-hero">
+    <nav>
+      <div class="head">
+        <img src="./assets/logo.png" alt="Logo design" />
+        <div class="name">
+          <h2>HAVEN<span>X</span></h2>
+          <h5>Creating Events that Inspire</h5>
+        </div>
+      </div>
+      <div class="bar">
+        <img src="./assets/fluent--navigation-24-filled_gold.svg" alt="Nav. bar" width="30px" />
+      </div>
+    </nav>
+  </div>
+
+  <main class="flow-main">
+    <h1 class="flow-title">Tell us about your event</h1>
+    <p class="flow-subtitle">Start with the basics. You can always make changes before publishing your event.</p>
+
+    <div class="progress-steps" aria-hidden="true">
+      <div class="step active">
+        <span class="step-circle">1</span>
+        <span class="step-label">Details</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <span class="step-circle">2</span>
+        <span class="step-label">Date &amp; Venue</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <span class="step-circle">3</span>
+        <span class="step-label">Banner</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <span class="step-circle">4</span>
+        <span class="step-label">Tickets</span>
+      </div>
+    </div>
+    <p class="step-caption">Step 1 of 4</p>
+
+    <form id="detailsForm" novalidate>
+      <div class="field">
+        <label for="eventName">Event Name</label>
+        <input type="text" id="eventName" name="eventName" placeholder="Lagos Tech Summit 2027" />
+        <span class="field-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="eventCategory">Event Category</label>
+        <select id="eventCategory" name="eventCategory">
+          <option value="">Select a category</option>
+          <option value="Technology">Technology</option>
+          <option value="Business">Business</option>
+          <option value="Education">Education</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Conference">Conference</option>
+          <option value="Workshop">Workshop</option>
+          <option value="Other">Other</option>
+        </select>
+        <span class="field-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="eventDescription">Event Description</label>
+        <textarea id="eventDescription" name="eventDescription" placeholder="Tell attendees what your event is about..."></textarea>
+        <span class="field-error"></span>
+      </div>
+
+      <div class="btn-row">
+        <a href="index.html" class="btn btn-outline">Cancel</a>
+        <button type="submit" class="btn btn-primary">Continue</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="./create-event.js"></script>
+</body>
+
+</html>

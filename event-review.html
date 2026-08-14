@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HavenX — Review Your Event</title>
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+</head>
+
+<body>
+  <div class="hero flow-hero">
+    <nav>
+      <div class="head">
+        <img src="./assets/logo.png" alt="Logo design" />
+        <div class="name">
+          <h2>HAVEN<span>X</span></h2>
+          <h5>Creating Events that Inspire</h5>
+        </div>
+      </div>
+      <div class="bar">
+        <img src="./assets/fluent--navigation-24-filled_gold.svg" alt="Nav. bar" width="30px" />
+      </div>
+    </nav>
+  </div>
+
+  <main class="flow-main" id="reviewPage">
+    <h1 class="flow-title">Review your event</h1>
+    <p class="flow-subtitle">This is how attendees will see your event. Make sure everything looks right.</p>
+
+    <div class="review-card" id="reviewCard">
+      <img id="reviewBanner" class="review-banner" src="" alt="Event banner preview" />
+
+      <p class="review-meta" id="reviewCategory">Category</p>
+      <h2 id="reviewName">Event name</h2>
+      <p class="review-description" id="reviewDescription">Description</p>
+
+      <div class="review-row">
+        <span class="label">Date</span>
+        <span class="value" id="reviewDate">Not set</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Time</span>
+        <span class="value" id="reviewTimeRange">Not set</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Event Type</span>
+        <span class="value" id="reviewType">Physical Event</span>
+      </div>
+      <div class="review-row" id="venueRow">
+        <span class="label">Venue</span>
+        <span class="value" id="reviewVenue">Not set</span>
+      </div>
+      <div class="review-row" id="addressRow">
+        <span class="label">Address</span>
+        <span class="value" id="reviewAddress">Not set</span>
+      </div>
+      <div class="review-row hidden-field" id="linkRow">
+        <span class="label">Event Link</span>
+        <span class="value" id="reviewLink">Not set</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Ticket</span>
+        <span class="value" id="reviewTicketType">Free ticket</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Price</span>
+        <span class="value" id="reviewTicketPrice">Free</span>
+      </div>
+      <div class="review-row">
+        <span class="label">Available Tickets</span>
+        <span class="value" id="reviewTicketQuantity">0</span>
+      </div>
+    </div>
+
+    <a href="event-details.html" class="review-edit-link">Edit Details</a>
+
+    <div class="btn-row">
+      <a href="event-tickets.html" class="btn btn-outline">Back</a>
+      <button type="button" class="btn btn-primary" id="publishBtn">Publish Event</button>
+    </div>
+  </main>
+
+  <div class="success-page hidden-field" id="successPage">
+    <div class="success-icon" aria-hidden="true">✓</div>
+    <h1>Your event has been published!</h1>
+    <p id="successSubtitle">Your event is now live.</p>
+    <button type="button" class="btn btn-primary" id="viewEventBtn">View Event</button>
+    <button type="button" class="btn btn-outline" id="copyLinkBtn">Copy Share Link</button>
+    <p class="field-hint" id="copyLinkFeedback"></p>
+  </div>
+
+  <script src="./create-event.js"></script>
+</body>
+
+</html>
