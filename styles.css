@@ -113,6 +113,7 @@ h3 {
   height: 2.5rem;
   position: relative;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .explore {
@@ -756,7 +757,7 @@ p {
 }
 
 /* -------- Tablet -------- */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .flow-main {
     max-width: 620px;
     padding: 2.5rem 2rem 4rem;
@@ -786,7 +787,7 @@ p {
 }
 
 /* -------- Desktop -------- */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .flow-main {
     max-width: 760px;
   }
