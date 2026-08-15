@@ -153,10 +153,18 @@ section {
   padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hide {
+  display: none;
+}
+
+.hide2 {
+  display: inline-block;
 }
 
 .card1 img, .card2 img, .card3 img {
@@ -168,7 +176,7 @@ section {
 
 p {
   font-family: "Inter", serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   color:  #111827;
 }
@@ -926,7 +934,6 @@ p {
   .social > div {
     margin: 1rem;
   }
-}
 
   .flow-main {
     max-width: 620px;
