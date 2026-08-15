@@ -801,7 +801,11 @@ p {
     line-height: 1.5;
     max-width: 45rem;
   }
-
+  
+  .create-explore {
+    display: flex;
+    flex-direction: row;
+  }
 
   .container1, .container2 {
     display: inline-block;
@@ -811,11 +815,7 @@ p {
   }
 
   .container1 {
-    margin-right: 0.5rem;
-  }
-
-  .container2 {
-    margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   .create, .explore {
