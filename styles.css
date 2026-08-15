@@ -174,7 +174,7 @@ section {
   margin: 0.5rem 0;
 }
 
-p, .card1 span{
+p {
   font-family: "Inter", serif;
   font-size: 14px;
   font-weight: 500;
