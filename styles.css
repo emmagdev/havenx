@@ -101,6 +101,9 @@ h3 {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
 .create {
   position: relative;
   top: 0.6rem;
@@ -167,6 +170,9 @@ section {
   display: inline-block;
 }
 
+.hide4 {
+  display: none;
+}
 .card1 img, .card2 img, .card3 img {
   display: inline-block;
   width: 2rem;
@@ -386,9 +392,9 @@ p {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 420px) {
+/*@media (max-width: 420px) {
   .step-label { display: none; }
-}
+}*/
 
 /* Form fields */
 .field {
@@ -823,8 +829,11 @@ p {
     padding-top: 0.4rem;
     font-size: 1.5rem;
   }
-
-
+  
+  .hide4 {
+    display: none;
+  }
+  
   .images {
     margin-top: 0.5rem;
   }
@@ -964,7 +973,238 @@ p {
 }
 
 /* -------- Desktop -------- */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
+
+  /* HERO / NAVIGATION SECTION */
+  .hero {
+    padding: 4rem 5rem;
+  }
+  .head>img, .bar img {
+    width: 15rem;
+   height: auto;
+  }
+  .name {
+    top: 5rem;
+  }
+  .hero nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .div .bar {
+    display: none; 
+  }
+  
+  .name h2 {
+    font-size: 5rem;
+  }
+  
+  .name h5 {
+    font-size: 2rem;
+    position: relative;
+    top: 2.5rem;
+  }
+  
+  .hide4{
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .hide4 img {
+    width: 100%;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+  
+  .hide3 {
+    display: none;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  
+  .hero-text {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero-text h1, .start h1{
+    font-size: 10rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+  }
+  
+  .hero-text > h3 {
+    font-size: 3rem;
+    line-height: 1.5;
+    max-width: 75rem;
+  }
+
+  .images {
+    display: none;
+  }
+  
+  .container1, .container2, .start .container1 {
+    display: inline-block;
+    width: 40rem;
+    height: 8rem;
+    margin-top: 2.5rem;
+    border-radius: 20px;
+  }
+  
+  .container1 {
+    margin-right: 2rem;
+  }
+  
+  .create, .explore, .start .create {
+    text-align: center;
+    padding-top: 1.4rem;
+    font-size: 3rem;
+  }
+  
+  .heading {
+    font-size: 4rem;
+  }
+
+
+  /* 2. WHY CHOOSE HAVENX SECTION */
+  .card1 {
+    display: flex;
+    background: #F3F4F6;
+    margin-top: 40px;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .card1 > div {
+    min-width: 10%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+  
+  .card1 img, .card2 img, .card3 img {
+    width: 10rem;
+    height: auto;
+  }
+  
+  .card1 p, .card2 p, .card3 p, .card4 p {
+    font-size: 3rem;
+    line-height: 1.8;
+    font-weight: 800;
+  }
+  
+  .card1 .hide4, .card3 .hide4 {
+    background: #F3F4F6;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arrows > img {
+    display: inline-block;
+    width: 20rem;
+  }
+  
+
+
+  /* 3. CORE FEATURES SECTION (MVP) */
+  .card2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .card2 > div, .card3 > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+
+  /* 4. HOW HAVENX WORKS SECTION */
+  .card3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  /* 5. TESTIMONIALS SECTION */
+  .testimonial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+  }
+
+  .card4 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
+  .card4 > img {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .soon {
+    padding: 0 20px;
+  }
+
+  /* 7. FOOTER */
+  footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+  }
+
+  .social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social > div {
+    margin: 2rem;
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .social img {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+  }
   .flow-main {
     max-width: 760px;
   }
