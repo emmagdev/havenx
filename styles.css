@@ -18,13 +18,15 @@ body {
   padding: 20px 20px 5px 20px;
 }
 
-nav, .bottom{
+nav,
+.bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-nav>.head, .bottom>.head {
+nav>.head,
+.bottom>.head {
   display: inline-block;
   display: flex;
   flex-direction: row;
@@ -46,7 +48,7 @@ nav>.head, .bottom>.head {
   top: -0.3rem;
 }
 
-h2{
+h2 {
   color: #F3F4F6;
   font-family: "Playfair Display", serif;
   font-size: 1.4rem;
@@ -56,8 +58,9 @@ h5 {
   font-family: "Playfair Display", serif;
   font-size: 0.3rem;
   color: #F3F4F6;
- 
+  
 }
+
 .name {
   display: inline-block;
   display: flex;
@@ -104,6 +107,7 @@ h3 {
 a {
   text-decoration: none;
 }
+
 .create {
   position: relative;
   top: 0.6rem;
@@ -111,7 +115,7 @@ a {
 
 .container2 {
   border-radius: 10px;
-  border: solid  #D4AF37 0.1rem;
+  border: solid #D4AF37 0.1rem;
   width: 100%;
   height: 2.5rem;
   position: relative;
@@ -130,11 +134,12 @@ a {
   justify-content: space-between;
 }
 
-.images>img, .card4>img {
+.images>img,
+.card4>img {
   display: inline-block;
   width: 6rem;
   height: 4.5rem;
-  border: solid  #E5E7EB 1px;
+  border: solid #E5E7EB 1px;
   border-radius: 7px;
   object-fit: cover;
 }
@@ -151,7 +156,8 @@ section {
   font-weight: 600;
 }
 
-.card1, .card4 {
+.card1,
+.card4 {
   background: #FFFFFF;
   padding: 10px;
   display: flex;
@@ -159,7 +165,7 @@ section {
   justify-content: space-between;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .hide {
@@ -173,7 +179,18 @@ section {
 .hide4 {
   display: none;
 }
-.card1 img, .card2 img, .card3 img {
+
+.hide4 img {
+  display: none;
+}
+
+.card3 .hide4 {
+  display: none;
+}
+
+.card1 img,
+.card2 img,
+.card3 img {
   display: inline-block;
   width: 2rem;
   height: auto;
@@ -184,10 +201,11 @@ p {
   font-family: "Inter", serif;
   font-size: 14px;
   font-weight: 500;
-  color:  #111827;
+  color: #111827;
 }
 
-.card2>div, .card3>div {
+.card2>div,
+.card3>div {
   background: #FFFFFF;
   border-radius: 10px;
   padding: 10px 7px;
@@ -195,22 +213,23 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .card2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
- grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 0.5rem;
   text-align: center;
 }
 
-.card3, .card4 {
+.card3,
+.card4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center; 
+  text-align: center;
 }
 
 .card3>div {
@@ -226,7 +245,7 @@ p {
   width: 3.5rem;
   height: 3.5rem;
   margin: 1rem;
-  position: relative ;
+  position: relative;
   top: 1.2rem;
 }
 
@@ -276,9 +295,9 @@ p {
 
 .social img {
   width: 1.5rem;
-    position: relative;
-    top: 0.1rem;
-    left: 0.1rem;
+  position: relative;
+  top: 0.1rem;
+  left: 0.1rem;
 }
 
 /* =========================================================
@@ -392,9 +411,11 @@ p {
   margin-bottom: 2rem;
 }
 
-/*@media (max-width: 420px) {
-  .step-label { display: none; }
-}*/
+@media (max-width: 420px) {
+  .step-label {
+    display: none;
+  }
+}
 
 /* Form fields */
 .field {
@@ -511,7 +532,13 @@ p {
 }
 
 .btn-row {
-  display: flex;
+  .nav-links {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+  }
   flex-direction: column-reverse;
   gap: 0.75rem;
   margin-top: 2rem;
@@ -777,32 +804,34 @@ p {
     padding: 2rem 2rem 1rem 2rem;
   }
   
-  .head>img, .bar img {
+  .head>img,
+  .bar img {
     width: 5rem;
-   height: auto;
+    height: auto;
   }
+  
   .name {
     top: 1.1rem;
   }
-
+  
   .name h2 {
     font-size: 2rem;
   }
-
+  
   .name h5 {
     font-size: 0.8rem;
     position: relative;
     top: 0.5rem;
   }
-
-
+  
+  
   h1 {
     font-size: 3rem;
     line-height: 1.15;
     margin: 1rem 0 1rem;
   }
-
-  .hero > h3 {
+  
+  .hero>h3 {
     font-size: 1.5rem;
     line-height: 1.5;
     max-width: 45rem;
@@ -812,19 +841,21 @@ p {
     display: flex;
     flex-direction: row;
   }
-
-  .container1, .container2 {
+  
+  .container1,
+  .container2 {
     display: inline-block;
     width: 20rem;
     height: 4rem;
     margin-top: 1.5rem;
   }
-
+  
   .container1 {
     margin-right: 1rem;
   }
-
-  .create, .explore {
+  
+  .create,
+  .explore {
     text-align: center;
     padding-top: 0.4rem;
     font-size: 1.5rem;
@@ -837,21 +868,21 @@ p {
   .images {
     margin-top: 0.5rem;
   }
-
-  .images > img {
+  
+  .images>img {
     width: 24%;
     height: 15rem;
   }
-
-
+  
+  
   section {
     padding: 1.5rem 2rem;
   }
-
+  
   .heading {
     font-size: 2rem;
   }
-
+  
   .card1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -863,50 +894,55 @@ p {
     display: inline-block;
   }
   
-  .hide2  {
+  .hide2 {
     display: none;
   }
-
-  .card1 > div {
+  
+  .card1>div {
     padding: 0.8rem;
     max-width: 20rem;
   }
-
-  .card1 img, .card2 img, .card3 img {
+  
+  .card1 img,
+  .card2 img,
+  .card3 img {
     width: 5rem;
     height: auto;
   }
-
-  .card1 p, .card2 p, .card3 p, .card4 p {
+  
+  .card1 p,
+  .card2 p,
+  .card3 p,
+  .card4 p {
     font-size: 1.5rem;
     line-height: 1.4;
     font-weight: 700;
   }
-
-  .card2 > div {
+  
+  .card2>div {
     min-height: 10rem;
   }
-
-
-  .card3 > div {
+  
+  
+  .card3>div {
     width: 15rem;
     min-height: 10rem;
     padding: 1rem;
   }
-
+  
   .card4 {
     width: 100%;
     padding: 1rem 3rem;
     justify-content: center;
   }
-
-  .card4 > img {
+  
+  .card4>img {
     width: 6rem;
     height: 6rem;
     margin: 1.5rem;
     top: 0;
   }
-
+  
   .write-up p {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -915,86 +951,123 @@ p {
   .card3 .soon {
     margin-top: 2rem;
   }
-
+  
   .start {
     width: 100%;
     padding: 2rem 3rem;
   }
-
+  
   .start h1 {
     font-size: 2.8rem;
   }
-
+  
   .start .container1 {
     display: block;
     width: 20rem;
     margin: 1rem auto;
   }
-
-
+  
+  
   /* =========================
      FOOTER
      ========================= */
-
+  
   .social {
     justify-content: center;
   }
-
-  .social > div {
+  
+  .social>div {
     margin: 1rem;
   }
-
+  
   .flow-main {
     max-width: 620px;
     padding: 2.5rem 2rem 4rem;
   }
-
+  
   .flow-title {
     font-size: 1.9rem;
   }
-
+  
   .field-row {
     flex-direction: row;
     gap: 1rem;
   }
-
+  
   .btn-row {
     flex-direction: row;
   }
-
+  
   .btn-row .btn {
     width: auto;
     flex: 1;
   }
-
+  
   .review-banner {
     height: 260px;
   }
 }
 
 /* -------- Desktop -------- */
-@media screen and (min-width: 1440px) {
-
+@media screen and (min-width: 1024px) {
+  
   /* HERO / NAVIGATION SECTION */
   .hero {
     padding: 4rem 5rem;
   }
-  .head>img, .bar img {
-    width: 15rem;
-   height: auto;
+  
+  .head>img {
+    width: 10rem;
+    height: auto;
   }
+  
   .name {
-    top: 5rem;
+    top: 3rem;
+    white-space: nowrap;
   }
-  .hero nav {
+  
+  .hero > nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
   }
-
-  .div .bar {
-    display: none; 
+  
+  .nav-links {
+    width: auto !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav-links h3 {
+    text-align: center;
+    display: inline-block;
+    margin: 0 4rem;
+    font-size: 3rem
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #F3F4F6;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .nav-links .container1 {
+    width: auto;
+  }
+  
+  .nav-links .create {
+    padding: 1.2rem;
+  }
+  
+  .bar {
+    display: none;
+  }
+  
+  .bar > img{
+    display: none;
   }
   
   .name h2 {
@@ -1007,12 +1080,13 @@ p {
     top: 2.5rem;
   }
   
-  .hide4{
+  .hide4 {
     display: inline-block;
     width: 100%;
   }
   
   .hide4 img {
+    display: inline-block;
     width: 100%;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
@@ -1021,7 +1095,7 @@ p {
   .hide3 {
     display: none;
   }
-
+  
   .hero-content {
     display: flex;
     flex-direction: row;
@@ -1037,23 +1111,26 @@ p {
     justify-content: center;
   }
   
-  .hero-text h1, .start h1{
+  .hero-text h1,
+  .start h1 {
     font-size: 10rem;
     line-height: 1.6;
     margin: 2rem 0;
   }
   
-  .hero-text > h3 {
+  .hero-text>h3 {
     font-size: 3rem;
     line-height: 1.5;
     max-width: 75rem;
   }
-
+  
   .images {
     display: none;
   }
   
-  .container1, .container2, .start .container1 {
+  .container1,
+  .container2,
+  .start .container1 {
     display: inline-block;
     width: 40rem;
     height: 8rem;
@@ -1065,7 +1142,9 @@ p {
     margin-right: 2rem;
   }
   
-  .create, .explore, .start .create {
+  .create,
+  .explore,
+  .start .create {
     text-align: center;
     padding-top: 1.4rem;
     font-size: 3rem;
@@ -1074,8 +1153,8 @@ p {
   .heading {
     font-size: 4rem;
   }
-
-
+  
+  
   /* 2. WHY CHOOSE HAVENX SECTION */
   .card1 {
     display: flex;
@@ -1084,8 +1163,8 @@ p {
     box-shadow: none;
     width: 100%;
   }
-
-  .card1 > div {
+  
+  .card1>div {
     min-width: 10%;
     flex: 1;
     display: flex;
@@ -1094,21 +1173,27 @@ p {
     background: #FFFFFF;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
   
-  .card1 img, .card2 img, .card3 img {
+  .card1 img,
+  .card2 img,
+  .card3 img {
     width: 10rem;
     height: auto;
   }
   
-  .card1 p, .card2 p, .card3 p, .card4 p {
+  .card1 p,
+  .card2 p,
+  .card3 p,
+  .card4 p {
     font-size: 3rem;
     line-height: 1.8;
     font-weight: 800;
   }
   
-  .card1 .hide4, .card3 .hide4 {
+  .card1 .arrows,
+  .card3 .arrows {
     background: #F3F4F6;
     box-shadow: none;
     display: flex;
@@ -1116,13 +1201,13 @@ p {
     align-items: center;
   }
   
-  .arrows > img {
+  .arrows>img {
     display: inline-block;
     width: 20rem;
   }
   
-
-
+  
+  
   /* 3. CORE FEATURES SECTION (MVP) */
   .card2 {
     display: flex;
@@ -1132,8 +1217,9 @@ p {
     margin-top: 40px;
     width: 100%;
   }
-
-  .card2 > div, .card3 > div {
+  
+  .card2>div,
+  .card3>div {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1141,8 +1227,8 @@ p {
     padding: 20px;
     border-radius: 20px;
   }
-
-
+  
+  
   /* 4. HOW HAVENX WORKS SECTION */
   .card3 {
     display: flex;
@@ -1150,13 +1236,14 @@ p {
     align-items: center;
     gap: 5rem;
   }
-
+  
   /* 5. TESTIMONIALS SECTION */
   .testimonial {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+  
   .card4 {
     display: flex;
     flex-direction: row;
@@ -1164,22 +1251,24 @@ p {
     gap: 40px;
     margin: 0 auto;
   }
-
+  
   .card4 img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
   }
   
-  .card4 > img {
-    width: 10rem;
-    height: 10rem;
+  .card4>img {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    top: 0;
   }
   
   .soon {
     padding: 0 20px;
   }
-
+  
   /* 7. FOOTER */
   footer .bottom {
     display: flex;
@@ -1188,13 +1277,13 @@ p {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 40px;
   }
-
+  
   .social {
     display: flex;
     gap: 15px;
   }
   
-  .social > div {
+  .social>div {
     margin: 2rem;
     width: 6rem;
     height: 6rem;
@@ -1205,10 +1294,11 @@ p {
     width: 5rem;
     height: 5rem;
   }
+  
   .flow-main {
     max-width: 760px;
   }
-
+  
   .review-banner {
     height: 320px;
   }
